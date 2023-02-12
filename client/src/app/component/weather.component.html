@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <tr>
+            <td>City</td>
+            <td>{{weather.name}}</td>
+        </tr>
+        <tr>
+            <td>Id:</td>
+            <td>{{weather.id}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{weather.description | titlecase}}</td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td>{{weather.temp -273| number :'2.1'}}  </td>
+        </tr>
+    </table>
+</div>
+
+<button><a [routerLink]="['']">BACK</a></button>

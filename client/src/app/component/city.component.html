@@ -1,0 +1,17 @@
+<p>city works!</p>
+
+<form [formGroup]="form" (ngSubmit)="add()">
+    <table>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" formControlName="city"></td>
+        </tr>
+        <tr><button type="submit">Add</button></tr>
+    </table>
+</form>
+
+<div *ngFor="let city of cities">
+    <li><a [routerLink]="['/search',city]">{{city.toString() | titlecase}}</a></li>
+</div>
+
+<button type="button" (click)="save()">SYNC</button>
